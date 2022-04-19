@@ -28,7 +28,7 @@ body{
 header{
     width: 100%;
     /* border:5px solid green; */
-    height: 100vh;
+    height: 100%;
     padding: 0 8.5%;
     position: relative;
     color: #fff;
@@ -68,10 +68,10 @@ nav{
 @keyframes move {
     40%,
     60%{
-        transform: translateX(-15px);
+        transform: translateY(15px);
     }
     100%{
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 body.darkmoder{
@@ -85,7 +85,7 @@ i.darkmoder{
 /* Bars menu */
 .bars__menu{
     display: none;
-    width: 3 0px;
+    width: 30px;
     height: 30px;
     position: relative;
     bottom: -8px;
@@ -154,9 +154,19 @@ nav ul li a:hover:after{
     letter-spacing: 1px;
     line-height: 26px;
 }
-.text-box h1{
-    font-size: 75px;
+.typing-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 50px;
     line-height: 160px;
+}
+.typing-text span{
+    position: relative;
+    bottom: -15px;
+    font-size: 1.5em;
+    margin-bottom: 15px;
 }
 .text-box a{
     margin-top: 30px;
@@ -337,6 +347,15 @@ main h2{
     }
     .bars__menu{
         display: block;
+    }
+    .typing-text{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:410px){
+    .typing-text{
+        font-size: 30px;
+        line-height: 100px;
     }
 }
 nav ul.active{
