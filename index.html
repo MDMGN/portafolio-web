@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="@Bienvenido a mi portafolio donde te contaré mi experiencia como desarrolador">
+    <link rel="icon" type="image/ico" sizes="32x32" href="assets/resources/images/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Portafolio - Darren Vargas</title>
+</head>
+<body>  
+    <div class="container">
+        <header>
+            <nav>
+                <img src="assets/resources/images/logo.png" alt="" class="logo">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Services</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="darkmoder-icon"><i class="fa-solid fa-sun"></i></div>
+                    <div class="bars__menu">
+                        <span class="line1__bars-menu"></span>
+                        <span class="line2__bars-menu"></span>
+                        <span class="line3__bars-menu"></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="text-box">
+                <h1>I'm <span class="auto-input"></span></h1>
+                <p>You can reach out  to me if yo need  any nelp in making a Websites for you or your bussines.</p>
+                <a href="#">Contact me</a>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+            <!-- <img src="assets/resources/images/bg7.png" alt="" class="user-img"> -->
+        </header>
+        <main>
+            <section id="about">
+                <h2>My Skills Fronted</h2>
+                <div class="container-progressbar">
+                    <div class="progress-container">
+                        <div class="burbuja-texto"><p>85%</p></div>
+                        <div class="progress" id="progress"></div>
+                            <div class="circle active"><i class="fab fa-html5"></i></div>
+                            <div class="circle"><i class="fab fa-css3-alt"></i></div>
+                            <div class="circle"><i class="fab fa-js"></i></div>
+                            <div class="circle"><i class="fab fa-vuejs"></i></div>
+                    </div>
+                    <button class="btn" id="prev" disabled>Prev</button>
+                    <button class="btn" id="next">Next</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="assets/scripts/app.js"></script>
+</body>
+</html>
