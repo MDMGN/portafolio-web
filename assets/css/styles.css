@@ -85,8 +85,8 @@ i.darkmoder{
 /* Bars menu */
 .bars__menu{
     display: none;
-    width: 40px;
-    height: 40px;
+    width: 3 0px;
+    height: 30px;
     position: relative;
     bottom: -8px;
 }
@@ -157,9 +157,6 @@ nav ul li a:hover:after{
 .text-box h1{
     font-size: 75px;
     line-height: 160px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 .text-box a{
     margin-top: 30px;
