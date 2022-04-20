@@ -25,7 +25,7 @@
     {
         "title":"Python",   
         "name":"Sendinblue",
-        "description":"Pequeño proyecto de sistema de gestión de emails, hecha con el lenguaje de programación 'Python' y la API 'Sendinblue' gestiona y administra los emails de usuarios para newsletter",
+        "description":"Pequeño proyecto de sistema de gestión de emails, desarrollada con el lenguaje de programación 'Python' y la API 'Sendinblue' gestiona y administra los emails de usuarios para newsletter.",
         "image":"assets/resources/images/sendinblue.png",
         "repository":"https://github.com/MDMGN/send",
         "url":""
