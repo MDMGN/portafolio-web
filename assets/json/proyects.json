@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Web",
+        "name":"Sistema de facturación",
+        "description":"Sistema de facturación de productos, desarrollada con las tecnologías web HTML5, CSS3, JavaScript, Boostrap4 y PHP. Donde tambien se usa una API para pagos Online, además de poder almacenar los datos en MariaDB.",
+        "image":"assets/resources,/images/pfactura.png",
+        "url": "https://gentler-curvature.000webhostapp.com/clientes_facturas_poo_mvc/login"
+    },
+    {
+        "title": "Web",
+        "name" : "Piazzere",
+        "description":"Pizzeria E-commerce, contribución al proyecto Frontend de @LiquidArtDevelopers, desarrollada con las tecnologías web HTML5, CSS3, SCSS y JavaScript",
+        "image":"assets/resources,/images/piazzere.png",
+        "repository": "https://github.com/LiquidArtDevelopers/_PROYECTO_PIZZERIA_",
+        "url":""
+    },
+    {
+        "title": "Android",
+        "name": "Touch - Kill Zombie",
+        "description": " Juego Touch para matar diferentes zombies. ¡Únete al terror y acción!. Desarrollado con JAVA y Android Studios para el Sistema Operativo móvil Android.",
+        "image":"assets/resources,/images/touchKillZombie.png",
+        "repository":"https://github.com/MDMGN/TouchKillZombie",
+        "url":"https://docs.google.com/document/d/1Mx2HmOUU8PBRV7wQxp3iqTa5atO19hE-/edit?usp=sharing&ouid=100778067612269930603&rtpof=true&sd=true"
+    },
+    {
+        "title":"Python",   
+        "name":"Sendinblue",
+        "description":"Pequeño proyecto de sistema de gestión de emails, hecha con el lenguaje de programación 'Python' y la API 'Sendinblue' gestiona y administra los emails de usuarios para newsletter",
+        "image":"assets/resources/images/sendinblue.png",
+        "repository":"https://github.com/MDMGN/send",
+        "url":""
+    }
+]
