@@ -332,6 +332,115 @@ main h2{
     font-size: 3rem;
     text-align: center;
 }
+nav ul.active{
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0px);
+    transition: transform 0.7s ease;
+    font-size: 75px;
+    font-weight: bold;
+}
+nav .logo.disable{
+    display: none;
+}
+nav .darkmoder-icon.disable{
+    display: none;
+}
+nav .bars__menu.active{
+    position: absolute;
+    right: 25px;
+    top: 15px;
+}
+/* Cards */
+.cards{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+#portfolio h2{
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin: 15px;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 05px 10px #000;
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3,35,54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.card .back .link{
+    border-top: 1px solid #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+.card .back .link a{
+    color: #f3f3f3;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .back p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+@media screen and (max-width:1024px) {
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width:912px) {
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media screen and (max-width:768px) {
     nav{
         justify-content: space-between;
@@ -351,29 +460,16 @@ main h2{
     .typing-text{
         flex-direction: column;
     }
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
 }
-@media screen and (max-width:410px){
+@media screen and (max-width:540px){
     .typing-text{
         font-size: 30px;
         line-height: 100px;
     }
-}
-nav ul.active{
-    display: flex;
-    flex-direction: column;
-    transform: translateY(0px);
-    transition: transform 0.7s ease;
-    font-size: 75px;
-    font-weight: bold;
-}
-nav .logo.disable{
-    display: none;
-}
-nav .darkmoder-icon.disable{
-    display: none;
-}
-nav .bars__menu.active{
-    position: absolute;
-    right: 25px;
-    top: 15px;
+    .cards{
+        grid-template-columns: 1fr;
+    }
 }
