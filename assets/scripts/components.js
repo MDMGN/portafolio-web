@@ -6,7 +6,7 @@ export default function(){
 }
 //Typing text animation vanilla JS.
 const typingAnimation=()=>{
-    const texts=['Developer','Creator','Designer'];
+    const texts=['Darren Vargas','Developer','Designer','Creator'];
     let count=0,index=0,currenText='',letter='';
     (function type(){
         if(count===texts.length) count=0;
