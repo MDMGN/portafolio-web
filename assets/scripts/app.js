@@ -1,8 +1,7 @@
 import cards from "./cards.js";
 import components from "./components.js";
 
-const d=document;
-d.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',()=>{
     components();
     cards();
 });
