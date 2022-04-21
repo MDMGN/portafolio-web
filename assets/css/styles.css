@@ -28,7 +28,7 @@ body{
 header{
     width: 100%;
     /* border:5px solid green; */
-    height: 100%;
+    height: 100vh;
     padding: 0 8.5%;
     position: relative;
     color: #fff;
@@ -36,6 +36,7 @@ header{
 nav{
     display: flex;
     width: 100%;
+    height: 20%;
     align-items: center;
     flex-wrap: wrap;
     padding: 30px 0 10px;
@@ -148,12 +149,29 @@ nav ul li a:after{
 nav ul li a:hover:after{
     width: 100%;
 }
+.parallax{
+    display: flex;
+    justify-content: center;
+    background:center  fixed url("../resources/images/piazzere.png");
+    background-size: cover;
+    height: 70%;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+}
 .text-box{
-    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    background-color: rgba(0,0,0,.1);
+    width: 100%;
+    height: 100%;
     font-size: 17px;
     letter-spacing: 1px;
     line-height: 26px;
 }
+
 .typing-text{
     display: flex;
     flex-direction: row;
@@ -163,18 +181,16 @@ nav ul li a:hover:after{
     line-height: 160px;
 }
 .typing-text span{
-    display:none;
-    opacity: 0;
     position: relative;
     bottom: -15px;
     font-size: 1.5em;
     margin-bottom: 15px;
 }
-.text-box.visible .typing-text .auto-input{
+/* .text-box.visible .typing-text .auto-input{
     display:block;
     opacity: 1;
     transition: all 0.7s ease;
-}
+} */
 .text-box a{
     margin-top: 30px;
     display: inline-block;
@@ -217,6 +233,22 @@ nav ul li a:hover:after{
     100%{
         opacity: 1;
     }
+}
+/*About*/
+#about{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.description{
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 50%;
 }
 /* Progress Bar */
 .fa-html5{
@@ -546,5 +578,10 @@ footer:last-child p{
     }
     .cards{
         grid-template-columns: 1fr;
+    }
+    .description{
+        margin-top: 15px;
+        font-size: 12px;
+        width: 60%;
     }
 }
