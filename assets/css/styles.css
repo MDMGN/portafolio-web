@@ -163,10 +163,14 @@ nav ul li a:hover:after{
     line-height: 160px;
 }
 .typing-text span{
+    display:none;
     position: relative;
     bottom: -15px;
     font-size: 1.5em;
     margin-bottom: 15px;
+}
+.text-box.visible .typing-text .auto-input{
+    display:block;
 }
 .text-box a{
     margin-top: 30px;
