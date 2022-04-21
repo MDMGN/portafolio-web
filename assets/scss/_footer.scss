@@ -1,0 +1,39 @@
+/*Footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+footer >*{
+    opacity: 0;
+    transform: scale(0.7);
+}
+footer .redes{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 20px;
+}
+.fa-linkedin{
+    color: #0072b1;
+    font-size: 2rem;
+}
+.fa-github{
+    color:#fff;
+    font-size: 2rem;
+}
+.fa-twitter{
+    color: #1da1f2;
+    font-size: 2rem;
+}
+.fa-instagram{
+    color:#fbad50;
+    font-size: 2rem;
+}
+footer:last-child p{
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
