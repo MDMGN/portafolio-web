@@ -9,9 +9,7 @@ const loadedElemnts=(entradas,observador)=>{
     });
 }
 const observador=new IntersectionObserver(loadedElemnts,{
-    root:null,
-    rootMargin: '0px 0px 0px 50px',
-    threshold:1.0
+    threshold:0.4
 });
 const showElements=()=>{
     const main=document.querySelector('main').children;
