@@ -164,6 +164,7 @@ nav ul li a:hover:after{
 }
 .typing-text span{
     display:none;
+    opacity: 0;
     position: relative;
     bottom: -15px;
     font-size: 1.5em;
@@ -171,6 +172,8 @@ nav ul li a:hover:after{
 }
 .text-box.visible .typing-text .auto-input{
     display:block;
+    opacity: 1;
+    transition: all 0.7s ease;
 }
 .text-box a{
     margin-top: 30px;
