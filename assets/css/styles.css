@@ -123,7 +123,7 @@ header .bars__menu span {
 .parallax {
   display: flex;
   justify-content: center;
-  background: center fixed url("../resources/images/piazzere.png");
+  background: center fixed url("../resources/images/programing.jpg");
   background-size: cover;
   border-radius: 20px;
   height: 80%;
