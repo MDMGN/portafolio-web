@@ -424,7 +424,7 @@ nav ul li a:hover:after {
   margin: 70px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
+  gap: 50px;
 }
 
 #portfolio h2 {
@@ -747,7 +747,7 @@ body.darkmoder #portfolio .card .back {
 body.darkmoder footer {
   background-color: #f0f0f0;
   border-radius: 50px;
-  width: 100%;
+  width: 90vw;
 }
 body.darkmoder footer .fab.fa-github {
   color: #fff;
