@@ -4,10 +4,11 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin-top: 50px;
 }
 footer >*{
     opacity: 0;
+    visibility: hidden;
     transform: scale(0.7);
 }
 footer .redes{
@@ -21,7 +22,7 @@ footer .redes{
     font-size: 2rem;
 }
 .fa-github{
-    color:#fff;
+    color:$color-white;
     font-size: 2rem;
 }
 .fa-twitter{
@@ -33,7 +34,7 @@ footer .redes{
     font-size: 2rem;
 }
 footer:last-child p{
-    color: #fff;
+    color: $color-white;
     text-decoration: underline;
     font-size: 1.5rem;
 }

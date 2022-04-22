@@ -3,30 +3,37 @@
     --line-boder-fill:#9c27b0;
     --line-boder-empty:#bdbdbd;
 }
-*{
+/* variables */
+$bgc: #020412;
+$padding-container: 1rem 2rem;
+$height-container: 100%;
+$color-white: #fff;
+$second-color: #f3950d;
+html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-html{
     scroll-behavior: smooth;
 }
+*::after,
+*::before{
+    box-sizing: inherit;
+}
 body{
-    background-color: #020412;
-    /* background-color: #1f2027; */
-
+    background-color: $bgc;
+    overflow-x: hidden;
 }
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    padding: 1rem 2rem;
+    height: $height-container;
+    padding: $padding-container;
 }
 main h2{
-    color:#fff;
+    color:$color-white;
     font-size: 3rem;
     text-align: center;
 }
@@ -39,3 +46,4 @@ main h2{
 @import 'footer.scss';
 @import 'fadeIn.scss';
 @import 'responsive.scss';
+@import 'darkmoder.scss';

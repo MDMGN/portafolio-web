@@ -1,0 +1,63 @@
+/*Darkmoder*/
+$bgc-light: rgba(0 0 0 / 0%);
+$bgc-footer: #f0f0f0;
+$color-black: #000;
+$color-orange: #f9ce31;
+$color-font: #020412;
+body{
+    transition: all 0.7s ease;
+    &.darkmoder{
+        background-color:$bgc-light;
+        nav ul li{
+            a{
+                color: $color-font;
+                font-weight: bold;
+                &:hover{
+                    color: $color-orange;
+                }
+            }
+        }
+        h2{
+            color: $color-font;
+        }
+        main article{
+            color: $color-font;
+        }
+        .bars__menu span{
+            background-color: $color-font;
+        }
+        ul.active{
+        background-color: $color-white;
+        }
+        .logo{
+            position: relative;
+            background: $color-black;
+            border-radius: 50%;
+            padding: 10px;
+            top: -25px
+        }
+        #portfolio{
+            h2{
+                color: $color-font;
+            }
+            .card .back{
+                box-shadow: 0 5px 10px #000;
+            }
+        }
+        footer{
+            background-color: $bgc-footer;
+            border-radius: 50px;
+            width: 100%;
+            .fab.fa-github{
+                color: #fff;
+                background-color: #000;
+                border-radius: 50%;
+            }
+            p{
+                color: $color-font;
+                font-weight: bold;
+            }
+        }
+    }
+}
+    

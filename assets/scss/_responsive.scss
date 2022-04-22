@@ -1,6 +1,10 @@
+/*Media Queries Responsive*/
 @media screen and (max-width:1024px) {
     .cards{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    nav{
+        height: 15%;
     }
 }
 @media screen and (max-width:912px) {
@@ -14,13 +18,12 @@
     }
     nav ul{
         display: none;
-        width: 100vw;
         height: 100vh;
         z-index: 100;
         touch-action: none;
     }
     .bars__menu{
-        display: block;
+        display: block !important;
     }
     .typing-text{
         flex-direction: column;
@@ -30,23 +33,33 @@
     }
 }
 @media screen and (max-width:540px){
+    .text-box{
+        width: 90%;
+    }
     .typing-text{
         font-size: 30px;
-        line-height: 100px;
+        line-height: 25px;
+        width: 100%;
+    }
+    .logo{
+        width: 60px!important;
     }
     .cards{
         grid-template-columns: 1fr;
     }
     .description{
         margin-top: 15px;
-        font-size: 12px;
+        font-size: 15px;
         width: 60%;
     }
 }
+/* Responsive Elements class active */
 nav ul.active{
-    position: relative;
-    padding: 20px;
-    left: -5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     font-size: 75px;
@@ -61,7 +74,8 @@ nav .darkmoder-icon.disable{
 }
 nav .bars__menu.active{
     position: absolute;
-    right: 25px;
+    right: 0;
     top: -20px;
     margin: 20px;
+    z-index: 999;
 }

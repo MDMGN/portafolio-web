@@ -4,20 +4,23 @@
   --line-boder-empty:#bdbdbd;
 }
 
-* {
+/* variables */
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 body {
   background-color: #020412;
-  /* background-color: #1f2027; */
+  overflow-x: hidden;
 }
 
 .container {
@@ -38,37 +41,38 @@ main h2 {
 /*Import modules*/
 header {
   width: 100%;
-  /* border:5px solid green; */
   height: 100vh;
   padding: 0 8.5%;
   position: relative;
   color: #fff;
+  /* Bars menu */
 }
-
-.logo {
+header .logo {
   width: 80px;
   cursor: pointer;
 }
-
-/*Darkmoder*/
-.darkmoder-icon {
+header .darkmoder-icon {
   cursor: pointer;
   font-size: 2rem;
 }
-
-.fa-sun {
-  color: #f7e018;
-  transition: all 0.7s ease;
+header .bars__menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  bottom: -8px;
 }
-
-.fa-moon {
-  color: #9c27b0;
-  transition: all 0.7s ease;
+header .bars__menu:hover {
+  cursor: pointer;
 }
-
-.move {
-  -webkit-animation: move 0.5s;
-          animation: move 0.5s;
+header .bars__menu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f3950d;
+  margin-top: 6px;
+  transform-origin: 0px 100%;
+  transition: all 300ms;
 }
 
 @-webkit-keyframes move {
@@ -88,37 +92,19 @@ header {
     transform: translateY(0);
   }
 }
-body.darkmoder {
-  filter: invert(100%);
+.fa-sun {
+  color: #f7e018;
   transition: all 0.7s ease;
 }
 
-img.darkmoder,
-i.darkmoder {
-  filter: invert(100%);
+.fa-moon {
+  color: #9c27b0;
+  transition: all 0.7s ease;
 }
 
-/* Bars menu */
-.bars__menu {
-  display: none;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  bottom: -8px;
-}
-
-.bars__menu:hover {
-  cursor: pointer;
-}
-
-.bars__menu span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #f3950d;
-  margin-top: 6px;
-  transform-origin: 0px 100%;
-  transition: all 300ms;
+.move {
+  -webkit-animation: move 0.5s;
+          animation: move 0.5s;
 }
 
 .activeline1__bars-menu {
@@ -139,18 +125,15 @@ i.darkmoder {
   justify-content: center;
   background: center fixed url("../resources/images/piazzere.png");
   background-size: cover;
-  height: 70%;
+  border-radius: 20px;
+  height: 80%;
   width: 100%;
-  padding: 1rem;
   overflow: hidden;
 }
 
 .text-box {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: end;
   background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
   width: 100%;
   height: 100%;
   font-size: 17px;
@@ -174,11 +157,6 @@ i.darkmoder {
   margin-bottom: 15px;
 }
 
-/* .text-box.visible .typing-text .auto-input{
-    display:block;
-    opacity: 1;
-    transition: all 0.7s ease;
-} */
 .text-box a {
   margin-top: 30px;
   display: inline-block;
@@ -387,36 +365,26 @@ i.darkmoder {
   font-style: italic;
   font-weight: 700;
   font-size: 17px;
-  padding-top: 10px;
 }
 
 nav {
   display: flex;
   width: 100%;
-  height: 20%;
+  height: 10%;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px 0 10px;
 }
-
-.nav-right {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
 nav ul {
   flex: 1;
   text-align: center;
   padding-right: 40px;
 }
-
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 10px 30px;
 }
-
 nav ul li a {
   position: relative;
   color: #fff;
@@ -426,11 +394,9 @@ nav ul li a {
   font-size: 17px;
   transition: 0.3s;
 }
-
 nav ul li a:hover {
   color: #f3950d;
 }
-
 nav ul li a:after {
   content: "";
   position: absolute;
@@ -441,6 +407,11 @@ nav ul li a:after {
   bottom: -10px;
   transition: 0.3s;
 }
+nav .nav-right {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 
 nav ul li a:hover:after {
   width: 100%;
@@ -448,7 +419,7 @@ nav ul li a:hover:after {
 
 /* Cards */
 .cards {
-  margin: 30px;
+  margin: 70px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
@@ -456,6 +427,7 @@ nav ul li a:hover:after {
 
 #portfolio h2 {
   opacity: 0;
+  visibility: hidden;
   color: #fff;
   font-size: 3rem;
   text-align: center;
@@ -464,6 +436,7 @@ nav ul li a:hover:after {
 
 .card {
   opacity: 0;
+  visibility: hidden;
   position: relative;
   width: 300px;
   height: 350px;
@@ -513,7 +486,7 @@ nav ul li a:hover:after {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  box-shadow: 0 5px 10px #000;
+  box-shadow: 0 5px 10px #fff;
 }
 
 .card .back .link {
@@ -550,11 +523,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin-top: 50px;
 }
 
 footer > * {
   opacity: 0;
+  visibility: hidden;
   transform: scale(0.7);
 }
 
@@ -593,17 +567,20 @@ footer:last-child p {
 
 main > * {
   opacity: 0;
+  visibility: hidden;
   transform: scale(0.5);
 }
 
 .visible {
   opacity: 1;
+  visibility: visible;
   transform: scale(1) translateY(0);
   transition: all 0.7s ease;
 }
 
 #portfolio {
   opacity: 1;
+  visibility: visible;
   transform: scale(1);
 }
 
@@ -615,15 +592,27 @@ main > * {
   transform: scale(0.5) translateX(-100px);
 }
 
+#portfolio.visible h2 {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.7s ease;
+}
+
 #portfolio.visible .card {
   opacity: 1;
+  visibility: visible;
   transform: scale(1) translateX(0px) !important;
   transition: all 0.7s ease;
 }
 
+/*Media Queries Responsive*/
 @media screen and (max-width: 1024px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  nav {
+    height: 15%;
   }
 }
 @media screen and (max-width: 912px) {
@@ -638,14 +627,13 @@ main > * {
 
   nav ul {
     display: none;
-    width: 100vw;
     height: 100vh;
     z-index: 100;
     touch-action: none;
   }
 
   .bars__menu {
-    display: block;
+    display: block !important;
   }
 
   .typing-text {
@@ -657,9 +645,18 @@ main > * {
   }
 }
 @media screen and (max-width: 540px) {
+  .text-box {
+    width: 90%;
+  }
+
   .typing-text {
     font-size: 30px;
-    line-height: 100px;
+    line-height: 25px;
+    width: 100%;
+  }
+
+  .logo {
+    width: 60px !important;
   }
 
   .cards {
@@ -668,14 +665,17 @@ main > * {
 
   .description {
     margin-top: 15px;
-    font-size: 12px;
+    font-size: 15px;
     width: 60%;
   }
 }
+/* Responsive Elements class active */
 nav ul.active {
-  position: relative;
-  padding: 20px;
-  left: -5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   font-size: 75px;
@@ -693,7 +693,62 @@ nav .darkmoder-icon.disable {
 
 nav .bars__menu.active {
   position: absolute;
-  right: 25px;
+  right: 0;
   top: -20px;
   margin: 20px;
+  z-index: 999;
+}
+
+/*Darkmoder*/
+body {
+  transition: all 0.7s ease;
+}
+body.darkmoder {
+  background-color: rgba(0, 0, 0, 0);
+}
+body.darkmoder nav ul li a {
+  color: #020412;
+  font-weight: bold;
+}
+body.darkmoder nav ul li a:hover {
+  color: #f9ce31;
+}
+body.darkmoder h2 {
+  color: #020412;
+}
+body.darkmoder main article {
+  color: #020412;
+}
+body.darkmoder .bars__menu span {
+  background-color: #020412;
+}
+body.darkmoder ul.active {
+  background-color: #fff;
+}
+body.darkmoder .logo {
+  position: relative;
+  background: #000;
+  border-radius: 50%;
+  padding: 10px;
+  top: -25px;
+}
+body.darkmoder #portfolio h2 {
+  color: #020412;
+}
+body.darkmoder #portfolio .card .back {
+  box-shadow: 0 5px 10px #000;
+}
+body.darkmoder footer {
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  width: 100%;
+}
+body.darkmoder footer .fab.fa-github {
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+}
+body.darkmoder footer p {
+  color: #020412;
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */
