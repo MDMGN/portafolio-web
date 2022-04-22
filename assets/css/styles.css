@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:ital@1&display=swap");
-:root {
-  --line-boder-fill:#9c27b0;
-  --line-boder-empty:#bdbdbd;
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/resources/fonts/Roboto/Roboto-Medium.ttf");
 }
-
 /* variables */
+/* Colors */
+/*Fonts*/
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  font-size: 20px;
   scroll-behavior: smooth;
 }
 
@@ -272,7 +274,7 @@ header .bars__menu span {
 
 .progress-container::before {
   content: "";
-  background-color: var(--line-boder-empty);
+  background-color: #bdbdbd;
   position: absolute;
   top: 50%;
   left: 0;
@@ -284,7 +286,7 @@ header .bars__menu span {
 }
 
 .progress {
-  background-color: var(--line-boder-fill);
+  background-color: #9c27b0;
   position: absolute;
   top: 50%;
   left: 0;
@@ -309,11 +311,11 @@ header .bars__menu span {
 }
 
 .container-progressbar .circle.active {
-  border-color: var(--line-boder-fill);
+  border-color: #9c27b0;
 }
 
 .container-progressbar .btn {
-  background-color: var(--line-boder-fill);
+  background-color: #9c27b0;
   color: #fff;
   border-radius: 6px;
   border: 0;
@@ -333,7 +335,7 @@ header .bars__menu span {
 }
 
 .container-progressbar .btn:disabled {
-  background-color: var(--line-boder-empty);
+  background-color: #bdbdbd;
   cursor: not-allowed;
 }
 
@@ -704,6 +706,7 @@ body {
   transition: all 0.7s ease;
 }
 body.darkmoder {
+  font-family: "Roboto";
   background-color: rgba(0, 0, 0, 0);
 }
 body.darkmoder nav ul li a {

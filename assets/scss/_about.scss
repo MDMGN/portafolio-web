@@ -47,7 +47,7 @@
 }
 .progress-container::before{
     content: "";
-    background-color: var(--line-boder-empty);
+    background-color: $line-boder-empty;
     position: absolute;
     top: 50%;
     left: 0;
@@ -58,7 +58,7 @@
     transition: 0.4s ease;
 }
 .progress{
-    background-color: var(--line-boder-fill);
+    background-color: $line-boder-fill;
     position: absolute;
     top: 50%;
     left: 0;
@@ -81,10 +81,10 @@
     transition: 0.4s ease;
 }
 .container-progressbar .circle.active{
-    border-color: var(--line-boder-fill);
+    border-color: $line-boder-fill;
 }
 .container-progressbar .btn{
-    background-color: var(--line-boder-fill);
+    background-color: $line-boder-fill;
     color: $color-white;
     border-radius: 6px;
     border: 0;
@@ -101,7 +101,7 @@
     transform: scale(0.97);
 }
 .container-progressbar .btn:disabled{
-    background-color: var(--line-boder-empty);
+    background-color: $line-boder-empty;
     cursor: not-allowed;
 }
 .burbuja-texto{
