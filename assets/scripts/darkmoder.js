@@ -1,4 +1,5 @@
 const switchBody=document.body.classList;
+const $darkmode_btn=document.querySelector('.fa-solid').classList;
 export default function darkmoder(){
     document.addEventListener('click',(e)=>{
         if(e.target.matches('.fa-solid')){
@@ -20,6 +21,13 @@ export default function darkmoder(){
             }
         }      
     });
-    (localStorage.getItem('theme')=== 'light') 
-    ? switchBody.add('darkmoder') : switchBody.remove('darkmoder');
+    if(localStorage.getItem('theme')=== 'light'){
+        switchBody.add('darkmoder');
+        $darkmode_btn.remove('fa-sun');
+        $darkmode_btn.add('fa-moon');
+    }else{
+        switchBody.remove('darkmoder');
+        $darkmode_btn.remove('fa-moon');
+        $darkmode_btn.add('fa-sun');
+    }
 }
