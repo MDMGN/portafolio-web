@@ -23,6 +23,7 @@ html {
 body {
   background-color: #020412;
   overflow-x: hidden;
+  outline: none;
 }
 
 .container {
@@ -517,6 +518,193 @@ nav ul li a:hover:after {
 
 .card:hover .back {
   transform: perspective(600px) rotateY(360deg);
+}
+
+/* Formulario */
+/* label{
+    position: relative;
+}
+label input{
+    font-size: 1.1rem;
+    background: #f1f7fe;
+    color: #052a4e;
+    padding: 1rem 1.15rem;
+    outline: none;
+    width: 25rem;
+    border-radius: 3px;
+    border: 2px solid rgba(5, 42, 78, 0.2);
+    transition: border-color 0.4s ease;
+}
+label input:focus{
+    border-color: #0f81f0
+}
+label p{
+    color: rgba(5, 42, 78,0.5);
+    font-size: 1.2rem;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0.8rem;
+    padding:  0 0.5rem;
+    background: #f1f7fe;
+    transition-property: top, font-size, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+label input:focus + p,
+label input:not(:placeholder-shown) + p{
+    top: 0;
+    font-size: 0.95rem;
+    color: #0f81f0;
+}
+label input:not(:focus)  p {
+    color: rgba(5, 42, 78, 0.5);
+} */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 1;
+  width: 50%;
+  min-width: 500px;
+  background-color: rgba(250, 250, 250, 0.1);
+  padding: 30px;
+  margin: auto;
+  color: #414141;
+  border-radius: 30px;
+}
+.form a {
+  color: rgb(65, 65, 65);
+}
+.form .form-group {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.form .form-group .text-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+}
+.form .form-group input {
+  width: 100%;
+  height: 150%;
+  background: none;
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  color: rgb(65, 65, 65);
+  border: none;
+  padding-bottom: 2px;
+  outline: 0px;
+}
+.form .form-group input:focus + .lb .text-name, .form .form-group input:valid + .lb .text-name {
+  transform: translateY(-100%);
+  font-size: 1rem;
+  color: rgb(232, 72, 85);
+}
+.form .form-group label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(65, 65, 65);
+}
+.form .form-group label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid rgb(123, 216, 96);
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus + .lb:after,
+.form-group input:valid + .lb:after {
+  transform: translateX(0%);
+}
+
+.form-group-acept {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  position: relative;
+  display: block;
+}
+
+.btn-submit {
+  /* box-shadow: 0px 10px 14px -7px #3e7327; */
+  background-color: rgb(123, 216, 96);
+  border-radius: 4px;
+  border: 1px solid rgb(123, 216, 96);
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-family: "Idioma";
+  padding: 6px 45px;
+  text-decoration: none;
+  margin-top: 30px;
+}
+.btn-submit:hover {
+  background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+  background-color: #72b352;
+}
+.btn-submit:active {
+  position: relative;
+  top: 1px;
+}
+
+.formulario__input-error {
+  font-size: 16px;
+  margin-bottom: 0;
+  display: none;
+}
+
+.formulario__input-activo {
+  display: block;
+}
+
+#formulario__mensaje-error {
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 15px;
+  margin-bottom: 7px;
+  display: none;
+}
+
+#formulario__mensaje-successful {
+  background-color: rgb(123, 216, 96);
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+  display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  caret-color: rgb(71, 7, 7);
+  -webkit-text-fill-color: rgb(65, 65, 65);
+  /* -webkit-box-shadow: 0 0 0px 1000px white inset; */
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /*Footer*/
