@@ -2,23 +2,6 @@ export default function(){
     typingAnimation();
     stepProgressBar();
     animateBars();
-    darkmoder();
-}
-//Typing text animation vanilla JS.
-const typingAnimation=()=>{
-    const texts=['Darren','Developer','Designer','Creator'];
-    let count=0,index=0,currenText='',letter='';
-    (function type(){
-        if(count===texts.length) count=0;
-        currenText=texts[count];
-        letter=currenText.slice(0,++index);
-        document.querySelector('.auto-input').textContent=letter;
-        if(letter.length===currenText.length){
-            count++;
-            index=0;
-        }
-        setTimeout(type,400);
-    })();
 }
 //Step Progress Bar Animation.
 const $progress=document.getElementById('progress');
@@ -87,20 +70,15 @@ const animateBars=()=>{
         document.querySelector('.darkmoder-icon').classList.toggle('disable');
     });
 }
-const darkmoder=()=>{
-    document.addEventListener('click',(e)=>{
-        if(e.target.matches('.fa-solid')){
-            if(e.target.classList.contains('fa-sun')){
-                e.target.classList.remove('fa-sun');
-                e.target.classList.add('fa-moon');
-                e.target.classList.add('move');
-            }else{
-                e.target.classList.remove('fa-moon');
-                e.target.classList.add('fa-sun');
-                e.target.classList.add('move');
-            }
-            setTimeout(()=>e.target.classList.remove('move'),400);
-            document.body.classList.toggle('darkmoder');
-        }      
-    });
+const typingAnimation=()=>{
+    const texts=['Darren','Developer','Designer','Creator'];
+    let count=0,index=0,currenText='',letter='';  
+    (function type(){
+        if(count===texts.length) count=0;
+        currenText=texts[count];
+        letter=currenText.slice(0,++index);
+        document.querySelector('.auto-input').textContent=letter;
+        if(letter.length===currenText.length) count++,index=0;
+        var setType=setTimeout(type,400);
+    })();
 }

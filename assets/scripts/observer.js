@@ -3,12 +3,9 @@ export default function observer(){
 }
 const loadedElemnts=(entradas,observador)=>{
     entradas.forEach(entrada => {
-        /* let isTexBox=entrada.target.classList.contains('text-box'); */
         if(entrada.isIntersecting){
             entrada.target.classList.add('visible');
-        }/* else{
-            if(isTexBox) entrada.target.classList.remove('visible');
-        } */
+        }
     });
 }
 const observador=new IntersectionObserver(loadedElemnts,{

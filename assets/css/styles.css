@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:ital@1&display=swap");
 @font-face {
   font-family: "Roboto";
-  src: url("assets/resources/fonts/Roboto/Roboto-Medium.ttf");
+  src: url("../resources/fonts/Roboto/Roboto-Medium.ttf");
 }
 /* variables */
 /* Colors */
@@ -607,6 +607,9 @@ main > * {
   transition: all 0.7s ease;
 }
 
+/* .auto-input.disable{
+    .t
+} */
 /*Media Queries Responsive*/
 @media screen and (max-width: 1024px) {
   .cards {

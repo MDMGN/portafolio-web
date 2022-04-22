@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:ital@1&display=swap');
 @font-face {
     font-family: 'Roboto';
-    src: url('assets/resources/fonts/Roboto/Roboto-Medium.ttf');
+    src: url('../resources/fonts/Roboto/Roboto-Medium.ttf');
 }
 /* variables */
 /* Colors */
@@ -15,12 +15,13 @@ $line-boder-empty: #bdbdbd;
 /*Fonts*/
 $poppins : 'Poppins', sans-serif;
 $roboto: 'Roboto';
+$font-size: 20px;
 html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $poppins;
-    font-size: 20px;
+    font-size: $font-size;
     scroll-behavior: smooth;
 }
 *::after,
