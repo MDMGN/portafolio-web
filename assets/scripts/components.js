@@ -2,6 +2,7 @@ export default function(){
     typingAnimation();
     stepProgressBar();
     animateBars();
+    topBoton('.top-btn');
 }
 //Step Progress Bar Animation.
 const $progress=document.getElementById('progress');
@@ -81,4 +82,15 @@ const typingAnimation=()=>{
         if(letter.length===currenText.length) count++,index=0;
         var setType=setTimeout(type,400);
     })();
+}
+const topBoton=(btn)=>{
+    const $scrollBtn=document.querySelector(btn).classList;
+    const btn2='.fa-arrow-up';
+    window.addEventListener('scroll',(e)=>{
+        let scrollTop= window.pageYOffset || document.documentElement.scrollTop;
+        (scrollTop > 600) ? $scrollBtn.add('hidden') : $scrollBtn.remove('hidden');
+    });
+    document.addEventListener('click',(e)=>{
+        if(e.target.matches(btn) || e.target.matches(btn2)) window.scrollTo({behavior:'smooth',top:0});
+    })
 }

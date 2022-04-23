@@ -15,22 +15,24 @@ $line-boder-empty: #bdbdbd;
 /*Fonts*/
 $poppins : 'Poppins', sans-serif;
 $roboto: 'Roboto';
-$font-size: 20px;
+$font-size: 18px;
 html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $poppins;
     font-size: $font-size;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 *::after,
 *::before{
     box-sizing: inherit;
 }
+
 body{
+    overflow-x: inherit;
     background-color: $bgc;
-    overflow-x: hidden;
     outline: none;
 }
 .container{
@@ -43,7 +45,7 @@ body{
 }
 main h2{
     color:$color-white;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
 }
 /*Import modules*/

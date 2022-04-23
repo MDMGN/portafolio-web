@@ -11,7 +11,8 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -21,8 +22,8 @@ html {
 }
 
 body {
+  overflow-x: inherit;
   background-color: #020412;
-  overflow-x: hidden;
   outline: none;
 }
 
@@ -37,7 +38,7 @@ body {
 
 main h2 {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -123,12 +124,40 @@ header .bars__menu span {
   transform: rotate(-45deg) translate(-4px, 2px);
 }
 
+.top-btn {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  right: 40px;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+}
+.top-btn .fas.fa-arrow-up {
+  position: relative;
+  bottom: -20%;
+  color: #000;
+  font-size: 2rem;
+}
+
+.top-btn.hidden {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+
 .parallax {
   display: flex;
   justify-content: center;
   background: center fixed url("../resources/images/programing.jpg");
   background-size: cover;
   border-radius: 20px;
+  box-shadow: 0 5px 10px #fff;
   height: 80%;
   width: 100%;
   overflow: hidden;
@@ -422,7 +451,7 @@ nav ul li a:hover:after {
 
 /* Cards */
 .cards {
-  margin: 200px;
+  margin: 0 200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
@@ -569,6 +598,7 @@ label input:not(:focus)  p {
   width: 400px;
   min-width: 400px;
   background-color: rgba(250, 250, 250, 0.1);
+  box-shadow: 0 5px 10px #fff;
   padding: 15px;
   margin: auto;
   color: #f3950d;
@@ -604,7 +634,7 @@ label input:not(:focus)  p {
 }
 .form .form-group input:focus + .lb .text-name, .form .form-group input:valid + .lb .text-name {
   transform: translateY(-100%);
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #fff;
 }
 .form .form-group label {
@@ -792,9 +822,6 @@ main > * {
   transition: all 0.7s ease;
 }
 
-/* .auto-input.disable{
-    .t
-} */
 /*Media Queries Responsive*/
 @media screen and (max-width: 1024px) {
   .cards {
@@ -833,6 +860,10 @@ main > * {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
+
+  #about {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 540px) {
   .text-box {
@@ -856,16 +887,12 @@ main > * {
   .description {
     margin-top: 15px;
     font-size: 15px;
-    width: 60%;
   }
 }
 /* Responsive Elements class active */
 nav ul.active {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   display: flex;
   flex-direction: column;
   font-size: 75px;
@@ -907,6 +934,9 @@ body.darkmoder nav ul li a:hover {
 body.darkmoder h2 {
   color: #020412;
 }
+body.darkmoder .parallax {
+  box-shadow: 0 5px 10px #000;
+}
 body.darkmoder main article {
   color: #020412;
 }
@@ -923,6 +953,12 @@ body.darkmoder .logo {
   padding: 10px;
   top: -25px;
 }
+body.darkmoder .top-btn {
+  background-color: #020412;
+}
+body.darkmoder .top-btn .fas.fa-arrow-up {
+  color: #fff;
+}
 body.darkmoder #portfolio h2 {
   color: #020412;
 }
@@ -931,6 +967,7 @@ body.darkmoder #portfolio .card .back {
 }
 body.darkmoder .form {
   background-color: rgba(250, 250, 250, 0.8);
+  box-shadow: 0 5px 10px #000;
 }
 body.darkmoder .form .text-name {
   color: #020412;
@@ -941,6 +978,7 @@ body.darkmoder .form input {
 }
 body.darkmoder footer {
   background-color: #f0f0f0;
+  box-shadow: 0 5px 10px #000;
   border-radius: 50px;
   width: 90vw;
 }

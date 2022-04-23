@@ -31,6 +31,9 @@
     .cards{
         grid-template-columns: 1fr 1fr;
     }
+    #about{
+        flex-direction: column;
+    }
 }
 @media screen and (max-width:540px){
     .text-box{
@@ -50,16 +53,12 @@
     .description{
         margin-top: 15px;
         font-size: 15px;
-        width: 60%;
     }
 }
 /* Responsive Elements class active */
 nav ul.active{
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     display: flex;
     flex-direction: column;
     font-size: 75px;

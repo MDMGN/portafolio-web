@@ -47,6 +47,7 @@ label input:not(:focus)  p {
     width: 400px;
     min-width: 400px;
     background-color: rgba(250,250,250,.1);
+    box-shadow: 0 5px 10px #fff;
     padding: 15px;
     margin: auto;
     color: $second-color;
@@ -80,7 +81,7 @@ label input:not(:focus)  p {
             &:focus + .lb .text-name,
             &:valid + .lb .text-name{
                 transform: translateY(-100%);
-                font-size: 1rem;
+                font-size: .9rem;
                 color: $color-white;
             }
         }
