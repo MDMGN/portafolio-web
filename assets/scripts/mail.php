@@ -1,10 +1,14 @@
 <?php 
-	$nombre = $_POST['name'];
+	$name = $_POST['name'];
 	$email = $_POST['email'];
+    $message=   $_POST['message'];
 	$asunto = 'Formulario Rellenado';
-	$mensaje = "Nombre: ".$nombre."<br> Email: $email<br> Mensaje:".$_POST['mensaje'];
-
-
-	if(mail('michaelmdvr@gmail.com', $asunto, $mensaje)){
-		echo "Correo enviado";
-	}
+    if(isset($name,$email,$message)){
+        $mensaje = "Nombre: ".$name."<br> Email: $email<br> Mensaje:".$message;
+        if(mail('michaelmdvr@gmail.com', $asunto, $mensaje)){
+            echo "Correo enviado";
+        }   
+    }else{
+        echo "Corre no enviado";
+    }
+?>
