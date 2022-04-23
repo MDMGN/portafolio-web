@@ -6,6 +6,9 @@
     nav{
         height: 15%;
     }
+    #about{
+        flex-direction: column;
+    }
 }
 @media screen and (max-width:912px) {
     .cards{

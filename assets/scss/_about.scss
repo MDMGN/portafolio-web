@@ -2,12 +2,15 @@
 #about{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     flex-wrap: wrap;
     align-items: center;
 }
 .description{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100px);
     color: $color-white;
     text-align: center;
     font-size: 18px;
@@ -32,7 +35,11 @@
     color: #0f9523;
 }
 .container-progressbar{
+    margin: 15px;
+    opacity: 0;
+    visibility: hidden;
     text-align: center;
+    transform: translateY(-100px);
 }
 .progress-container{
     display: flex;
