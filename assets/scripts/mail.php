@@ -1,5 +1,5 @@
 <?php 
-	$nombre = $_POST['nombre'];
+	$nombre = $_POST['name'];
 	$email = $_POST['email'];
 	$asunto = 'Formulario Rellenado';
 	$mensaje = "Nombre: ".$nombre."<br> Email: $email<br> Mensaje:".$_POST['mensaje'];
