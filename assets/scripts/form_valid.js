@@ -1,16 +1,14 @@
 'use strict';
-const $formulario = document.querySelector('.form');
+const $formulario = document.getElementById('form');
 const $inputs = document.querySelectorAll('.form input');
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{7,9}$/, // 7 a 9 numeros.
 }
 
 const campo={
     name:false,
     email:false,
-    phone:false,
 }
 //Función para la llamada en app.js
 
@@ -22,7 +20,7 @@ export default function validForm(){
     
     $formulario.addEventListener('submit',(e)=>{
         e.preventDefault();
-        if(campo.name && campo.email && campo.phone){
+        if(campo.name && campo.email){
              $formulario.reset();
              document.getElementById('formulario__mensaje-error').style.display='none';
              document.getElementById('formulario__mensaje-successful').style.display='block';
@@ -50,9 +48,6 @@ const validarFormulario=(e)=>{
         break;
         case 'email':
             validarCampo(expresiones.correo,'email',e.target.value);
-        break;
-        case 'phone':
-            validarCampo(expresiones.telefono,'phone',e.target.value);
         break;
     }
 }

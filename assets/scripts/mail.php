@@ -8,4 +8,3 @@
 	if(mail('michaelmdvr@gmail.com', $asunto, $mensaje)){
 		echo "Correo enviado";
 	}
- ?>
