@@ -422,7 +422,7 @@ nav ul li a:hover:after {
 
 /* Cards */
 .cards {
-  margin: 70px;
+  margin: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
@@ -566,23 +566,19 @@ label input:not(:focus)  p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-basis: 1;
-  width: 50%;
-  min-width: 500px;
+  width: 400px;
+  min-width: 400px;
   background-color: rgba(250, 250, 250, 0.1);
-  padding: 30px;
+  padding: 15px;
   margin: auto;
-  color: #414141;
+  color: #f3950d;
   border-radius: 30px;
-}
-.form a {
-  color: rgb(65, 65, 65);
 }
 .form .form-group {
   margin-top: 15px;
-  width: 100%;
+  width: 50%;
   height: 50px;
-  max-width: 400px;
+  width: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -591,15 +587,17 @@ label input:not(:focus)  p {
   bottom: 5px;
   left: 0;
   transition: all 0.3s ease;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: none;
 }
 .form .form-group input {
   width: 100%;
   height: 150%;
   background: none;
   font-size: 1.2rem;
-  background-color: #ffffff;
-  color: rgb(65, 65, 65);
+  background-color: #020412;
+  color: #fff;
   border: none;
   padding-bottom: 2px;
   outline: 0px;
@@ -607,7 +605,7 @@ label input:not(:focus)  p {
 .form .form-group input:focus + .lb .text-name, .form .form-group input:valid + .lb .text-name {
   transform: translateY(-100%);
   font-size: 1rem;
-  color: rgb(232, 72, 85);
+  color: #fff;
 }
 .form .form-group label {
   position: absolute;
@@ -616,7 +614,6 @@ label input:not(:focus)  p {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid rgb(65, 65, 65);
 }
 .form .form-group label::after {
   content: "";
@@ -625,7 +622,7 @@ label input:not(:focus)  p {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  border-bottom: 3px solid rgb(123, 216, 96);
+  border-bottom: 3px solid #ffa425;
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
@@ -637,28 +634,28 @@ label input:not(:focus)  p {
 
 .form-group-acept {
   margin-top: 30px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   position: relative;
+  color: #fff;
   display: block;
 }
 
 .btn-submit {
   /* box-shadow: 0px 10px 14px -7px #3e7327; */
-  background-color: rgb(123, 216, 96);
+  background-color: #f3950d;
   border-radius: 4px;
-  border: 1px solid rgb(123, 216, 96);
+  border: 1px solid #ffa425;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
-  font-size: 1.6rem;
-  font-family: "Idioma";
+  font-size: 1.2rem;
+  font-weight: 400;
   padding: 6px 45px;
   text-decoration: none;
   margin-top: 30px;
 }
 .btn-submit:hover {
-  background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-  background-color: #72b352;
+  background: linear-gradient(to bottom, #ffa425 5%, #ffa425 100%);
+  background-color: #ffa425;
 }
 .btn-submit:active {
   position: relative;
@@ -931,6 +928,16 @@ body.darkmoder #portfolio h2 {
 }
 body.darkmoder #portfolio .card .back {
   box-shadow: 0 5px 10px #000;
+}
+body.darkmoder .form {
+  background-color: rgba(250, 250, 250, 0.8);
+}
+body.darkmoder .form .text-name {
+  color: #020412;
+}
+body.darkmoder .form input {
+  background-color: #fff;
+  color: #020412;
 }
 body.darkmoder footer {
   background-color: #f0f0f0;
