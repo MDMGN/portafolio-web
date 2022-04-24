@@ -62,9 +62,6 @@ const validarFormulario=(e)=>{
 }
 async function enviarFormulario(){
     const datos=new FormData($formulario);
-    datos.append('name',data.name);
-    datos.append('email',data.email);
-    datos.append('message',data.message);
     const init = {
         method: "POST",
         body: datos,
