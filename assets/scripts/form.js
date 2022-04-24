@@ -66,8 +66,9 @@ async function enviarFormulario(){
     datos.append('email',data.email);
     datos.append('message',data.message);
     const init = {
-        method: 'POST',
-        body: datos
+        method: "POST",
+        body: datos,
+        mode: "cors"
       };
       // petición ajax con fetch
       try {
