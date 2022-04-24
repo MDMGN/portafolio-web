@@ -8,6 +8,10 @@ header{
         width: 60px;
         margin-bottom: 20px;
         cursor: pointer;
+        transition: all .5s ease-in-out;
+        &:hover{
+            transform: scale(.9);
+        }
     }
     .darkmoder-icon{
         cursor: pointer;
@@ -44,13 +48,22 @@ header{
         transform: translateY(0);
     }
 }
+.redes > *:hover{
+    transform: scale(.8);
+} 
 .fa-sun{
     color: #f7e018;
-    transition: all .7s ease;
+    transition: all .7s ease-in-out;
+    &:hover{
+        transform: scale(.9);
+    }
 }
 .fa-moon{
     color: #9c27b0;
-    transition: all .7s ease;
+    transition: all .7s ease-in-out;
+    &:hover{
+        transform: scale(.9);
+    }
 }
 .move{
     animation: move 0.5s;
@@ -83,7 +96,13 @@ header{
         bottom: -20%;
         color: #000;
         font-size: 2rem;
+        &:hover{
+            opacity: .8;
+        }
     }
+}
+.top-btn:hover{
+    transform: scale(.9);
 }
 .top-btn.hidden{
     opacity: 1;
