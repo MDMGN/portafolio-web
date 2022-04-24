@@ -24,7 +24,7 @@
         if(mail($to, $subject, $mensaje,$headers)){
             $res=[
                 "err"=>false,
-                "message"=>"El formularioa ha sido enviado exitosamente."
+                "message"=>"El formulario ha sido enviado exitosamente."
             ];
         }else{
             $res=[
@@ -32,7 +32,7 @@
                 "message"=>"Error al enviar tus datos. Intenta nuevamente."
             ];
         }
-header("Access-Control-Allow-Origin:*");
+header("Access-Control-Allow-Origin:mdmgn.github.io");
 header("Content-type:application/json");
 echo json_encode($res);
 }
