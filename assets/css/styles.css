@@ -52,7 +52,8 @@ header {
   /* Bars menu */
 }
 header .logo {
-  width: 80px;
+  width: 60px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 header .darkmoder-icon {
@@ -911,6 +912,19 @@ main > * {
   .description {
     margin-top: 15px;
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .text-box a {
+    padding: 10px 15px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .form {
+    width: 300px;
   }
 }
 /* Responsive Elements class active */

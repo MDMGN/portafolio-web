@@ -60,8 +60,11 @@ const animateBars=()=>{
     const $line3__bars=document.querySelector('.line3__bars-menu');
     const $bars__menu=document.querySelector('.bars__menu');
     const $nav_menu=document.querySelector('nav ul');
+    const $nav_enlaces=document.querySelectorAll('nav ul li a');
     const $nav_logo=document.querySelector('nav .logo');
-    $bars__menu.addEventListener('click',()=>{
+    $bars__menu.addEventListener('click',()=> toggleBurgerMenu());
+    $nav_enlaces.forEach(el=>el.addEventListener('click',()=> toggleBurgerMenu()));
+    const toggleBurgerMenu=()=>{
         $line1__bars.classList.toggle('activeline1__bars-menu');
         $line2__bars.classList.toggle('activeline2__bars-menu');
         $line3__bars.classList.toggle('activeline3__bars-menu');
@@ -69,7 +72,7 @@ const animateBars=()=>{
         $nav_logo.classList.toggle('disable');
         $bars__menu.classList.toggle('active');
         document.querySelector('.darkmoder-icon').classList.toggle('disable');
-    });
+    }
 }
 const typingAnimation=()=>{
     const texts=['Darren','Developer','Designer','Creator'];
