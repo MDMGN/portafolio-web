@@ -14,7 +14,7 @@
             </p>
             <ul>
                 <li>Nombre: $name</li>
-                <li>Email:$email</li>
+                <li>Email: $email</li>
             </ul>
             <p>$message</p>
         ";
