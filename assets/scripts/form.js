@@ -62,7 +62,7 @@ async function enviarFormulario(){
         const response = await fetch('https://gentler-curvature.000webhostapp.com/mail.php', init);
         $response.innerHTML=`
         <div class="formulario__mensaje-successful">
-            <p >${response.json().message}</p>
+            <p >El formulario ha sido enviado exitosamente!</p>
         </div>
         `;
         $formulario.reset();
