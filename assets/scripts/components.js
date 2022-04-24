@@ -63,7 +63,11 @@ const animateBars=()=>{
     const $nav_enlaces=document.querySelectorAll('nav ul li a');
     const $nav_logo=document.querySelector('nav .logo');
     $bars__menu.addEventListener('click',()=> toggleBurgerMenu());
-    $nav_enlaces.forEach(el=>el.addEventListener('click',()=> toggleBurgerMenu()));
+    $nav_enlaces.forEach(el=>el.addEventListener('click',()=>{
+        if($nav_menu.classList.contains('active')){
+            toggleBurgerMenu();
+        }
+    }));
     const toggleBurgerMenu=()=>{
         $line1__bars.classList.toggle('activeline1__bars-menu');
         $line2__bars.classList.toggle('activeline2__bars-menu');
