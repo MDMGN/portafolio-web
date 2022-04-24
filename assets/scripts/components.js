@@ -79,7 +79,7 @@ const animateBars=()=>{
     }
 }
 const typingAnimation=()=>{
-    const texts=['Darren','Developer','Designer','Creator'];
+    const texts=['Darren','Desarrollador','Creador','Programador'];
     let count=0,index=0,currenText='',letter='';  
     (function type(){
         if(count===texts.length) count=0;
