@@ -24,21 +24,15 @@ export default function form(){
     
     $formulario.addEventListener('submit',(e)=>{
         e.preventDefault();
-        if(campo.name && campo.email){
-            enviarFormulario();
-             $formulario.reset();
-             document.getElementById('formulario__mensaje-error').style.display='none';
-        }else{
-            document.getElementById('formulario__mensaje-error').style.display='block';
-        }
+        if(campo.name && campo.email) enviarFormulario();
     });
 }
 const validarCampo=(expresion,name,value)=>{
     if(expresion.test(value)){
-        document.querySelector(`#${name}-error`).classList.remove('formulario__input-activo');
+        document.querySelector(`#${name}-error`).classList.remove('activo');
         campo[name]=true;
     }else{
-        document.querySelector(`#${name}-error`).classList.add('formulario__input-activo');
+        document.querySelector(`#${name}-error`).classList.add('activo');
         campo[name]=false;
     }
 }
@@ -67,15 +61,17 @@ async function enviarFormulario(){
       try {
         const response = await fetch('https://gentler-curvature.000webhostapp.com/mail.php', init);
         $response.innerHTML=`
-        <div id="formulario__mensaje-successful">
-            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+        <div class="formulario__mensaje-successful">
+            <p >${response.json().message}</p>
         </div>
         `;
+        $formulario.reset();
       } catch (err) {
-        $response.innerHTML(`
-        <div id="formulario__mensaje-error">
-            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> ${err.message}</p>
-        </div>`);
+        $response.innerHTML=`
+        <div class="formulario__mensaje-error">
+            <p>Error al enviar tus datos. Intenta nuevamente.</p>
+        </div>`;
+        console.error(`Fomulario error: ${err}`);
       }finally{
         setTimeout(()=>$response.classList.remove('hidden'),300);
         setTimeout(()=>$response.classList.add('hidden'),5000);

@@ -696,28 +696,32 @@ label input:not(:focus)  p {
 }
 
 .formulario__input-error {
-  font-size: 16px;
+  font-size: 12px;
   margin-bottom: 0;
   display: none;
 }
 
-.formulario__input-activo {
+.formulario__input-error.activo {
   display: block;
 }
 
-#formulario__mensaje-error {
+.formulario__mensaje-error {
   background-color: rgba(255, 0, 0, 0.5);
   color: #000;
-  padding: 15px;
-  margin-bottom: 7px;
-  display: none;
+  padding: 5px;
+  margin-top: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
 }
 
-#formulario__mensaje-successful {
+.formulario__mensaje-successful {
   background-color: rgba(123, 216, 96, 0.5);
   color: #000;
   padding: 5px;
   margin-top: 7px;
+  font-size: 15px;
+  font-weight: bold;
   text-align: center;
 }
 
