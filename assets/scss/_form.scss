@@ -156,6 +156,8 @@ label input:not(:focus)  p {
     padding: 5px;
     margin-top: 7px;
     text-align: center;
+}
+.response.hidden{
     display: none;
 }
 input:-webkit-autofill,

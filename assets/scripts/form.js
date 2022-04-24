@@ -28,10 +28,6 @@ export default function form(){
             enviarFormulario();
              $formulario.reset();
              document.getElementById('formulario__mensaje-error').style.display='none';
-             document.getElementById('formulario__mensaje-successful').style.display='block';
-            setTimeout(() => {
-                document.getElementById('formulario__mensaje-successful').style.display='none';
-            }, 5000);
         }else{
             document.getElementById('formulario__mensaje-error').style.display='block';
         }
@@ -62,23 +58,26 @@ const validarFormulario=(e)=>{
 }
 async function enviarFormulario(){
     const datos=new FormData($formulario);
+    const $response=document.querySelector('.response');
     const init = {
         method: "POST",
         body: datos,
         mode: "cors"
       };
-      // petición ajax con fetch
       try {
         const response = await fetch('https://gentler-curvature.000webhostapp.com/mail.php', init);
-        if (response.ok) {
-          // obtenemos la respuesta del servidor web
-          // se supone que el servidor nos responderá
-          // si todo ha ido bien o no
-          const respuesta = await response.json();
-        } else {
-          throw new Error(response.statusText);
-        }
+        $response.innerHTML=`
+        <div id="formulario__mensaje-successful">
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+        </div>
+        `;
       } catch (err) {
-        alert( "Error al enviar el formulario: " + err.message);
+        $response.innerHTML(`
+        <div id="formulario__mensaje-error">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> ${err.message}</p>
+        </div>`);
+      }finally{
+        setTimeout(()=>$response.classList.remove('hidden'),300);
+        setTimeout(()=>$response.classList.add('hidden'),5000);
       }
 }
