@@ -3,7 +3,7 @@
         error_reporting(0);
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $message=   $_POST['message'];
+        $message=  $_POST['message'];
         $subject = 'Formulario Rellenado';
 
         $domain= $_SERVER['HTTP_HOST'];
@@ -16,7 +16,7 @@
                 <li>Nombre: $name</li>
                 <li>Email:$email</li>
             </ul>
-            <p>Mensaje</p>
+            <p>$message</p>
         ";
         $headers="MIME-Version: 1.0\r\n"."Content-Type:text/html; charset=utf8\r\n".
         "From: Envío Automatico <no-reply@$domain>";
