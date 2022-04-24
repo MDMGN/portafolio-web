@@ -17,8 +17,8 @@
     opacity: 0;
     visibility: hidden;
     position: relative;
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
 }
 .card .face{
     position: absolute;
@@ -67,6 +67,7 @@
 }
 .card .back .link a{
     color: #f3f3f3;
+    font-size: 15px;
 }
 .card .back h3{
     font-size: 30px;
@@ -75,6 +76,7 @@
 }
 .card .back p{
     letter-spacing: 1px;
+    font-size: 15px;
 }
 .card:hover .front{
     transform: perspective(600px) rotateY(180deg);
