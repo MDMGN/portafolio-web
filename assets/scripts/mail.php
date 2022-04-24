@@ -32,7 +32,7 @@
                 "message"=>"Error al enviar tus datos. Intenta nuevamente."
             ];
         }
-header("Access-Control-Allow-Origin:mdmgn.github.io");
+header("Access-Control-Allow-Origin:*");
 header("Content-type:application/json");
 echo json_encode($res);
 }
