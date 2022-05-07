@@ -15,6 +15,14 @@
         "url":"https://gentler-curvature.000webhostapp.com/_PROYECTO_PIZZERIA_"
     },
     {
+        "title": "Web",
+        "name" : "Tik-Tok",
+        "description":"Contenido para entretener",
+        "image":"assets/resources/images/tik-tok.png",
+        "repository": "https://github.com/LiquidArtDevelopers/_PROYECTO_PIZZERIA_",
+        "url":"https://gentler-curvature.000webhostapp.com/_PROYECTO_PIZZERIA_"
+    },
+    {
         "title": "Android",
         "name": "Touch - Kill Zombie",
         "description": " Juego Touch para matar diferentes zombies. ¡Únete al terror y acción!. Desarrollado con JAVA y Android Studios para el Sistema Operativo móvil Android.",
