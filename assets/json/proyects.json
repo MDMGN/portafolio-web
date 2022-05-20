@@ -23,6 +23,14 @@
         "url":"https://gcode123xz.github.io/tik-tok"
     },
     {
+        "title": "Web",
+        "name" : "Semiconservas",
+        "description":"Proyecto Web, desarrollado con las tecnologías HTML5, CSS3, BootStrap, JavaScritp.",
+        "image":"assets/resources/images/sconservasdelnorte.jpg",
+        "repository": "https://github.com/MDMGN/semiconservasdelnorte",
+        "url":"https://mdmgn.github.io/semiconservasdelnorte"
+    },
+    {
         "title": "Android",
         "name": "Touch - Kill Zombie",
         "description": " Juego Touch para matar diferentes zombies. ¡Únete al terror y acción!. Desarrollado con JAVA y Android Studios para el Sistema Operativo móvil Android.",
