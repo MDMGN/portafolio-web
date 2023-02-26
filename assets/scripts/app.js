@@ -1,3 +1,4 @@
+import "../scss/styles.scss"
 import cards from "./cards.js";
 import components from "./components.js";
 import darkmoder from "./darkmoder.js";
