@@ -1,0 +1,40 @@
+main > *{
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+}
+.visible{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: all 0.7s ease;
+}
+#about.visible .description,
+#about.visible .container-progressbar{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition: all 0.7s ease;
+}
+#portfolio {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+.card:nth-child(even){
+    transform: scale(0.5) translateX(100px);
+}
+.card:nth-child(odd){
+    transform: scale(0.5) translateX(-100px);
+}
+#portfolio.visible h2{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s ease;
+}
+#portfolio.visible .card{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0) translateX(0px) !important;
+    transition: all 0.7s ease;
+}

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:ital@1&display=swap');
+@font-face {
+    font-family: 'Roboto';
+    src: url('../resources/fonts/Roboto/Roboto-Medium.ttf');
+}
+/* variables */
+/* Colors */
+$bgc: #020412;
+$padding-container: 1rem 2rem;
+$height-container: 100%;
+$color-white: #fff;
+$second-color: #f3950d;
+$line-boder-fill: #9c27b0;
+$line-boder-empty: #bdbdbd;
+/*Fonts*/
+$poppins : 'Poppins', sans-serif;
+$roboto: 'Roboto';
+$font-size: 18px;
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $poppins;
+    font-size: $font-size;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    overflow-x: inherit;
+    background-color: $bgc;
+    outline: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: $height-container;
+    padding: $padding-container;
+}
+main h2{
+    color:$color-white;
+    font-size: 2rem;
+    text-align: center;
+}
+/*Import modules*/
+@import 'header.scss';
+@import 'parallax.scss';
+@import 'about.scss';
+@import 'navbar.scss';
+@import 'cards.scss';
+@import 'form.scss';
+@import 'footer.scss';
+@import 'fadeIn.scss';
+@import 'responsive.scss';
+@import 'darkmoder.scss';

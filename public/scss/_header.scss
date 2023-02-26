@@ -1,0 +1,111 @@
+header{
+    width: 100%;
+    height: 100vh;
+    padding: 0 8.5%;
+    position: relative;
+    color: $color-white;
+    .logo{
+        width: 60px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        &:hover{
+            transform: scale(.9);
+        }
+    }
+    .darkmoder-icon{
+        cursor: pointer;
+        font-size: 2rem;
+    }
+    /* Bars menu */
+    .bars__menu{
+        display: none;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        bottom: -8px;
+        &:hover{
+            cursor: pointer;
+        }
+        span{
+            display:block;
+            width:100%;
+            height: 2px;
+            background-color: $second-color;
+            margin-top: 6px;
+            transform-origin: 0px 100%;
+            transition: all 300ms;
+        }
+    }
+}
+
+@keyframes move {
+    40%,
+    60%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.redes > *:hover{
+    transform: scale(.8);
+} 
+.fa-sun{
+    color: #f7e018;
+    transition: all .7s ease-in-out;
+    &:hover{
+        transform: scale(.9);
+    }
+}
+.fa-moon{
+    color: #9c27b0;
+    transition: all .7s ease-in-out;
+    &:hover{
+        transform: scale(.9);
+    }
+}
+.move{
+    animation: move 0.5s;
+}
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-2px,1px);
+}
+.activeline2__bars-menu{
+    opacity: 0;
+    margin-left: -30px;
+}
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-4px,2px);
+}
+.top-btn{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    right: 40px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 999;
+    .fas.fa-arrow-up{
+        position: relative;
+        bottom: -20%;
+        color: #000;
+        font-size: 2rem;
+        &:hover{
+            opacity: .8;
+        }
+    }
+}
+.top-btn:hover{
+    transform: scale(.9);
+}
+.top-btn.hidden{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+}

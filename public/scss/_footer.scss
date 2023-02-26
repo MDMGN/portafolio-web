@@ -1,0 +1,40 @@
+/*Footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+footer >*{
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+}
+footer .redes{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 20px;
+}
+.fa-linkedin{
+    color: #0072b1;
+    font-size: 2rem;
+}
+.fa-github{
+    color:$color-white;
+    font-size: 2rem;
+}
+.fa-twitter{
+    color: #1da1f2;
+    font-size: 2rem;
+}
+.fa-envelope{
+    color:#2fa2e9;
+    font-size: 2rem;
+}
+footer:last-child p{
+    color: $color-white;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}

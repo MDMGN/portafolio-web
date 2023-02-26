@@ -59,7 +59,7 @@ async function enviarFormulario(){
         mode: "cors"
       };
       try {
-        const response = await fetch('https://gentler-curvature.000webhostapp.com/mail.php', init);
+        const response = await fetch('https://mdmgn.000webhostapp.com/portafolio/mail.php', init);
         $response.innerHTML=`
         <div class="formulario__mensaje-successful">
             <p >El formulario ha sido enviado exitosamente!</p>
