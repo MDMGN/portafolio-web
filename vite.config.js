@@ -4,5 +4,6 @@ export default defineConfig({
     build: {
         outDir: 'docs',
         // ... otras opciones de configuración
-      }
+      },
+      base: './'
 })
