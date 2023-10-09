@@ -3,14 +3,14 @@
         "title": "Web",
         "name":"Sistema de facturación",
         "description":"Sistema de facturación de productos, desarrollado con las tecnologías web HTML5, CSS3, JavaScript, Boostrap4, PHP y MySQL.        usuario:seven7@gmail.com usuario:12a3@gmail.com  contraseña:12345678.",
-        "image":"./images/pfactura.png",
+        "image":"/images/pfactura.png",
         "url": "https://gentler-curvature.000webhostapp.com/clientes_facturas_poo_mvc/login"
     },
     {
         "title": "Web",
         "name" : "Piazzere",
         "description":"Pizzeria E-commerce, contribución al proyecto Frontend de @LiquidArtDevelopers, desarrollado con las tecnologías web HTML5, CSS3, SASS y JavaScript",
-        "image":"./images/piazzere.png",
+        "image":"/images/piazzere.png",
         "repository": "https://github.com/LiquidArtDevelopers/_PROYECTO_PIZZERIA_",
         "url":"https://gentler-curvature.000webhostapp.com/piazzere/"
     },
@@ -18,7 +18,7 @@
         "title": "Web",
         "name" : "Tik-Tok",
         "description":"Contenido para entretener",
-        "image":"./images/tik-tok.png",
+        "image":"/images/tik-tok.png",
         "repository": "https://github.com/GCode123xz/tik-tok",
         "url":"https://gcode123xz.github.io/tik-tok"
     },
@@ -26,7 +26,7 @@
         "title": "Web",
         "name" : "Semiconservas",
         "description":"Proyecto Web, desarrollado con las tecnologías HTML5, CSS3, BootStrap, JavaScritp.",
-        "image":"./images/sconservasdelnorte.jpg",
+        "image":"/images/sconservasdelnorte.jpg",
         "repository": "https://github.com/MDMGN/semiconservasdelnorte",
         "url":"https://mdmgn.github.io/semiconservasdelnorte"
     },
@@ -34,7 +34,7 @@
         "title": "Android",
         "name": "Touch - Kill Zombie",
         "description": " Juego Touch para matar diferentes zombies. ¡Únete al terror y acción!. Desarrollado con JAVA y Android Studios para el Sistema Operativo móvil Android.",
-        "image":"./images/touchKillZombie.png",
+        "image":"/images/touchKillZombie.png",
         "repository":"https://github.com/MDMGN/TouchKillZombie",
         "url":"https://docs.google.com/document/d/1Mx2HmOUU8PBRV7wQxp3iqTa5atO19hE-/edit?usp=sharing&ouid=100778067612269930603&rtpof=true&sd=true"
     },
@@ -42,7 +42,7 @@
         "title":"Python",   
         "name":"Sendinblue",
         "description":"Pequeño proyecto de sistema de gestión de emails, desarrollado con el lenguaje de programación 'Python' y la API 'Sendinblue' gestiona y administra los emails de usuarios para newsletter.",
-        "image":"./images/sendinblue.png",
+        "image":"/images/sendinblue.png",
         "repository":"https://github.com/MDMGN/send",
         "url":""
     }
