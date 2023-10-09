@@ -2,14 +2,15 @@ import projects from "../json/proyects.json";
 export default function cards(){
     createCards();
 }
-console.log(location)
+
+const {origin, pathname}= location
 
 const createCards=()=>{
     const $cards=document.querySelector('.cards');
     const $template=document.getElementById('template-card').content;
     const $fragment=document.createDocumentFragment();
     projects.forEach(proyect => {
-        $template.querySelector('.card img').setAttribute('src',`${location.origin+proyect.image}`);
+        $template.querySelector('.card img').setAttribute('src',`${origin+pathname+proyect.image}`);
         $template.querySelector('.card h3').textContent=`${proyect.title}`;
         $template.querySelector('.card p').textContent=`${proyect.description}`;
         $template.querySelector('.card .url').setAttribute('href',`${proyect.url}`);
